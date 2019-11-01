@@ -1,4 +1,5 @@
 import * as mutationTypes from './mutation-types';
+import Vue from 'vue';
 
 export default {
     [mutationTypes.LOAD_CONTACTS] (state) {

@@ -1,9 +1,9 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using contacts_list.Infrasctructure.Model;
+using ContactsList.Infrasctructure.Model;
 
-namespace contacts_list.Infrasctructure.Repositories.Abstract {
+namespace ContactsList.Infrasctructure.Repositories.Abstract {
 
     public interface IContactsRepository : IBaseRepository<Contact>
     {

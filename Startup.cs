@@ -4,12 +4,11 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.SpaServices.Webpack;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using contacts_list.Providers;
-using contacts_list.Infrasctructure.Model;
-using contacts_list.Infrasctructure.Repositories;
-using contacts_list.Infrasctructure.Repositories.Abstract;
+using ContactsList.Infrasctructure.Model;
+using ContactsList.Infrasctructure.Repositories;
+using ContactsList.Infrasctructure.Repositories.Abstract;
 
-namespace contacts_list
+namespace ContactsList
 {
     public class Startup
     {

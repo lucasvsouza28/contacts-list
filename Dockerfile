@@ -18,4 +18,4 @@ ENV ASPNETCORE_URLS=http://+:$port
 
 # Run the application. REPLACE the name of dll with the name of the dll produced by your application
 EXPOSE $port
-CMD ["dotnet", "contacts_list.dll"]
+CMD ["dotnet", "ContactsList.dll"]

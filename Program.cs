@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 
-namespace contacts_list
+namespace ContactsList
 {
     public class Program
     {

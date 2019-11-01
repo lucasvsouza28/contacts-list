@@ -4,10 +4,10 @@ using System.Text;
 using System.Collections;
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
-using contacts_list.Infrasctructure.Model;
-using contacts_list.Infrasctructure.Repositories.Abstract;
+using ContactsList.Infrasctructure.Model;
+using ContactsList.Infrasctructure.Repositories.Abstract;
 
-namespace contacts_list.Infrasctructure.Repositories
+namespace ContactsList.Infrasctructure.Repositories
 {
     public abstract class BaseRepository<T> : IBaseRepository<T> where T : BaseEntity
     {

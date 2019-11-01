@@ -5,7 +5,7 @@ using System.Linq;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 
-namespace contacts_list.Controllers
+namespace ContactsList.Controllers
 {
     public class HomeController : Controller
     {

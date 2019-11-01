@@ -4,11 +4,11 @@ using System.Collections.Generic;
 using System.Linq;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
-using contacts_list.Infrasctructure.Repositories.Abstract;
-using contacts_list.Infrasctructure.Model;  
+using ContactsList.Infrasctructure.Repositories.Abstract;
+using ContactsList.Infrasctructure.Model;  
 using Microsoft.EntityFrameworkCore;
 
-namespace contacts_list.Controllers
+namespace ContactsList.Controllers
 {
     [Route("/api/{controller}")]
     public class ContactsController : Controller

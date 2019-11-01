@@ -3,7 +3,7 @@ using System.Collections;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace contacts_list.Infrasctructure.Model {
+namespace ContactsList.Infrasctructure.Model {
 
     [Table("ContactInfo")]
     public class ContactInfo : BaseEntity

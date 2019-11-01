@@ -28,7 +28,7 @@ export default ({
   
           commit(mutationTypes.LOAD_INFOS_SUCCESS, {contactId: payload, data: resp.data})
         } catch (error) {
-          commit(mutationTypes.LOAD_INFOS_ERROR)
+          commit(mutationTypes.LOAD_INFOS_ERROR, error.message)
         }
       }
   

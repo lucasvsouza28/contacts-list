@@ -2,10 +2,10 @@ using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Text;
-using contacts_list.Infrasctructure.Model;
+using ContactsList.Infrasctructure.Model;
 //using System.Data.Entity;
 
-namespace contacts_list.Infrasctructure.Repositories {
+namespace ContactsList.Infrasctructure.Repositories {
 
     public class ContactsContext : DbContext {
 
