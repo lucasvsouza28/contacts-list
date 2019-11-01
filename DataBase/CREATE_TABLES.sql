@@ -1,0 +1,42 @@
+USE [MyContacts]
+GO
+
+/****** Object:  Table [dbo].[Contact]    Script Date: 31/10/2019 22:52:41 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+IF (OBJECT_ID('Contact') IS NULL)
+BEGIN
+	CREATE TABLE [dbo].[Contact](
+		[Id] [int] IDENTITY(1,1) NOT NULL,
+		[Name] [nvarchar](50) NULL,
+	 CONSTRAINT [PK_Contact] PRIMARY KEY CLUSTERED 
+	(
+		[Id] ASC
+	)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+	) ON [PRIMARY]
+END
+GO
+
+IF (OBJECT_ID('ContactInfo') IS NULL)
+BEGIN
+	CREATE TABLE [dbo].[ContactInfo](
+		[Id] [int] IDENTITY(1,1) NOT NULL,
+		[Type] [smallint] NOT NULL,
+		[Value] [nvarchar](50) NOT NULL,
+		[ContactId] [int] NOT NULL,
+	 CONSTRAINT [PK_Table_1] PRIMARY KEY CLUSTERED 
+	(
+		[Id] ASC
+	)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+	) ON [PRIMARY]
+
+	ALTER TABLE [dbo].[ContactInfo]  WITH CHECK ADD  CONSTRAINT [FK_ContactInfo_Contact] FOREIGN KEY([ContactId])
+	REFERENCES [dbo].[Contact] ([Id])
+
+	ALTER TABLE [dbo].[ContactInfo] CHECK CONSTRAINT [FK_ContactInfo_Contact]
+END
+GO
