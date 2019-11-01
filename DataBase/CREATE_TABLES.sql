@@ -1,6 +1,3 @@
-USE [MyContacts]
-GO
-
 /****** Object:  Table [dbo].[Contact]    Script Date: 31/10/2019 22:52:41 ******/
 SET ANSI_NULLS ON
 GO
