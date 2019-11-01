@@ -2,7 +2,7 @@
         <v-container fluid>
             <v-row style="min-width: 100%" justify="center">
                 <v-subheader class="headline">
-                    {{contact.id ? `${contact.name} (${contact.id})` : 'Novo contato'}}
+                    {{contact.id ? `#${contact.id} - ${contact.name}` : 'Novo contato'}}
                 </v-subheader>
 
             </v-row>
@@ -43,8 +43,9 @@
                                     <v-btn
                                         large class="mr-4"
                                         v-on="on"
+                                        v-if="contact.id"
                                         @click="newInfo">
-                                        <v-icon>note_add</v-icon> Nova Informaçção
+                                        <v-icon>note_add</v-icon> Nova Informação
                                     </v-btn>
                                 </template>
                                 <span>Nova informação de contato</span>

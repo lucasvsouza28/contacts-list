@@ -13,9 +13,9 @@
       <v-container
         class="grey lighten-4"
       >
-      <v-alert v-if="message" :type="message.type" dismissible>
+      <v-snackbar v-model="message" :type="message.type" timeout="2000" bottom>
             {{message.value}}
-          </v-alert>
+          </v-snackbar>
         <v-layout justify>          
             <router-view></router-view>
         </v-layout>
@@ -34,6 +34,7 @@
 
       data () {
         return {
+          newMessage: ''
         }
       },
 
@@ -41,6 +42,12 @@
         ...mapGetters({
           message: 'getMessage'
         })
+      },
+      watch: {
+        message (newV, oldV){
+          this.newMessage = null;
+          this.newMessage = newV;
+        }
       }
     }
 </script>

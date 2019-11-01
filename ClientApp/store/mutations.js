@@ -39,6 +39,9 @@ export default {
       
       state.message = {type: 'success', value: 'Contato salvo com sucesso' };
     },
+    [mutationTypes.SAVE_CONTACT_ERROR] (state, payload) {
+      state.message = {type: 'error', value: 'Ocorreu um erro aro salvar o contato: ' + payload };
+    },
     [mutationTypes.DELETE_CONTACT_ERROR] (state, payload) {
       state.message = {type: 'error', value: payload };
     },

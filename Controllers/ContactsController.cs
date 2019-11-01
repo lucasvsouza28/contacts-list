@@ -52,7 +52,7 @@ namespace ContactsList.Controllers
         [HttpPost]
         public IActionResult Create([FromBody]Contact contact)
         {
-            this.Repo.Insert(contact);
+            contact.Id = this.Repo.Insert(contact);
 
             return Json(contact);
         }

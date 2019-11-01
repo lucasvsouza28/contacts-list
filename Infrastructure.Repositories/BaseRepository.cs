@@ -39,7 +39,9 @@ namespace ContactsList.Infrasctructure.Repositories
         public virtual int Insert(T entity)
         {
             this.Context.Set<T>().Add(entity);
-            return this.Context.SaveChanges();
+            this.Context.SaveChanges();
+
+            return entity.Id;
         }
 
         public virtual void Update(T entity)

@@ -18,6 +18,8 @@ export default ({
       commit(mutationTypes.LOAD_CONTACTS_SUCCESS, payload)
     },
     async selectContactId ({commit}, payload) {
+
+      commit(mutationTypes.SELECT_CONTACT_ID, payload)
       
       if (payload > -1) {      
   
@@ -31,10 +33,8 @@ export default ({
           commit(mutationTypes.LOAD_INFOS_ERROR, error.message)
         }
       }
-  
-      commit(mutationTypes.SELECT_CONTACT_ID, payload)
     },
-    async saveContact ({commit}, payload) {
+    async saveContact ({commit, dispatch }, payload) {
       try {
   
         let newData = null;
@@ -45,10 +45,11 @@ export default ({
         }
         else {
           const resp = await axios.post('/api/contacts', payload);
-          newData = resp.data
+          newData = resp.data          
         }
         
         commit(mutationTypes.SAVE_CONTACT_SUCCESS, newData);
+        dispatch('selectContactId', newData.id);
       } catch (error) {
         commit(mutationTypes.SAVE_CONTACT_ERROR, error.message);
       }

@@ -6,9 +6,9 @@ Agenda de contatos
 - Vue 2 + Vuetify
 - EntityFramework
 - SQL Server
-- 
+
 ## Instalação
-Execute o script de criação das tabelas disponível a pasta DataBase, e altere o arquivo *appsettings.json* com a ConnectionString correta.
+Execute o script de criação das tabelas disponível na pasta DataBase, e altere o arquivo *appsettings.json* com a ConnectionString correta.
 
 Restaure o projeto .NET Core com o comando:
 ```

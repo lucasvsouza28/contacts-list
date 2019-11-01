@@ -15,10 +15,13 @@ export default {
     getContacts(state) {
       return state.contacts;
     },
-    getSelected (state) {
-      return state.selectedId === -1
+    getSelectedId(state) {
+      return state.selectedId;      
+    },
+    getSelected (state, getters) {
+      return getters.getSelectedId < 1
         ? Object.assign({}, { infos: [{}] }) 
-        : state.contacts.find(c=> c.id === state.selectedId);
+        : getters.getContacts.find(c=> c.id === getters.getSelectedId);
     },
   
     getFilteredContacts(state) {
