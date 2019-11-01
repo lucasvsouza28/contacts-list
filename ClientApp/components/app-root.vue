@@ -13,7 +13,7 @@
       <v-container
         class="grey lighten-4"
       >
-      <v-snackbar v-model="message" :type="message.type" timeout="2000" bottom>
+      <v-snackbar v-model="message" :type="message.type" :timeout="2000" bottom>
             {{message.value}}
           </v-snackbar>
         <v-layout justify>          
@@ -42,12 +42,6 @@
         ...mapGetters({
           message: 'getMessage'
         })
-      },
-      watch: {
-        message (newV, oldV){
-          this.newMessage = null;
-          this.newMessage = newV;
-        }
       }
     }
 </script>
