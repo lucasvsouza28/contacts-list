@@ -33,7 +33,7 @@ namespace ContactsList.Controllers
             var contact = this.Repo.GetById(id);
 
             if (contact == null)
-                return StatusCode(400, "Contato não encontrado");
+                return StatusCode(400, "Contato não encontrado na base");
 
             return null;
         }
@@ -43,7 +43,7 @@ namespace ContactsList.Controllers
             var contact = this.InfoRepo.GetById(id);
 
             if (contact == null)
-                return StatusCode(400, "Detalhe do contato não encontrado");
+                return StatusCode(400, "Detalhe do contato não encontrado na base");
 
             return null;
         }
